@@ -1,7 +1,9 @@
 pipeline {
-		agent {
-			label "dind18"
+ agent {
+    label "dind18"
 		}
+	
+stages {	
 stage('Build image') { // build and tag docker image
         steps {
             echo 'Starting to build docker image'
@@ -13,7 +15,7 @@ stage('Build image') { // build and tag docker image
             }
         }
     }
-
+}
     // stage ('Push image to Artifactory') { // take that image and push to artifactory
     //     steps {
     //         rtDockerPush(
