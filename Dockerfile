@@ -1,5 +1,6 @@
 FROM registry.access.redhat.com/ubi9/ubi:latest 
 # Make sure to maintain alphabetical ordering when adding new packages.
+USER root
 RUN INSTALL_PKGS="\
     jq \
     " && \
